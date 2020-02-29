@@ -1,0 +1,5 @@
+<button  *ngIf="message === 'false'" class="btn btn-outline-success btn-space" routerLink="/login" routerLinkActive="active" style=" background: palevioletred!important;">Login</button>
+<div class="divider"></div>
+<button  *ngIf="message === 'false'" class="btn btn-outline-primary"  routerLink="/register" routerLinkActive="active" style="">Register</button>
+<button  *ngIf="message === 'true'" class="btn btn-outline-danger"  (click)="logout()" routerLink="/login" routerLinkActive="active">Logout</button>
+<h1 style="color: #1cff2b">{{message}}</h1>

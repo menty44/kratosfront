@@ -80,6 +80,12 @@ import { FusionChartsModule } from "angular-fusioncharts";
 import * as FusionCharts from "fusioncharts";
 import * as charts from "fusioncharts/fusioncharts.charts";
 import * as FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
+import { CredititemsComponent } from './credititems/credititems.component';
+import { CredititemscreateComponent } from './credititemscreate/credititemscreate.component';
+import { SubscriptionitemscreateComponent } from './subscriptionitemscreate/subscriptionitemscreate.component';
+import { SubscriptionitemsComponent } from './subscriptionitems/subscriptionitems.component';
+import { PromotionsComponent } from './promotions/promotions.component';
+import { PromotionscreateComponent } from './promotionscreate/promotionscreate.component';
 // Pass the fusioncharts library and chart modules
 FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);
 
@@ -144,7 +150,13 @@ FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);
     PaymentmethodComponent,
     PaymentmethodcreateComponent,
     PreloaderComponent,
-    FooternewComponent
+    FooternewComponent,
+    CredititemsComponent,
+    CredititemscreateComponent,
+    SubscriptionitemscreateComponent,
+    SubscriptionitemsComponent,
+    PromotionsComponent,
+    PromotionscreateComponent
   ],
     imports: [
         BrowserModule,

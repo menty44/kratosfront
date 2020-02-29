@@ -25,5 +25,20 @@ export class StoreComponent implements OnInit {
     this.routes.navigate(['/rooms']);
   }
 
+  navigateProd = () => {
+    this.routes.navigate(['/product-items']);
+  }
+
+  navigatecredit = () => {
+    this.routes.navigate(['/credit-items']);
+  }
+
+  navigateSub = () => {
+    this.routes.navigate(['/subscription-items']);
+  }
+
+  navigatePromo = () => {
+    this.routes.navigate(['/promotions']);
+  }
 
 }

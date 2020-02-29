@@ -20,7 +20,7 @@ export class TaxComponent implements OnInit {
     this.auth = JSON.parse(localStorage.getItem('auth'));
 
     if (this.auth === false) {
-      this.routes.navigate(['/login']);
+      await this.routes.navigate(['/login']);
     }
      console.log("axios check")
 

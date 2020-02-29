@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import axios from "axios";
 
 @Component({
   selector: 'app-productitems',
@@ -9,11 +10,17 @@ import {Router} from "@angular/router";
 export class ProductitemsComponent implements OnInit {
 
   auth :boolean
+
   constructor(private routes:Router) { }
 
-  ngOnInit() {
+  async ngOnInit() {
     this.auth = JSON.parse(localStorage.getItem('auth'));
-    this.auth !== true ? this.routes.navigate(['/login']) : '';
+    this.auth !== true ? await this.routes.navigate(['/login']) : '';
+
+  }
+
+  navigate = () => {
+    this.routes.navigate(['/product-items/create'])
   }
 
 }

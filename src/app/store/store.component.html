@@ -1,41 +1,54 @@
-
 <div class="app-content content">
   <div class="content-wrapper">
     <div class="content-header row">
     </div>
     <div class="content-body">
       <!-- Stats -->
+      <h1>Store settings</h1>
+
       <div class="row">
 
-        <div class="card col-md-12">
-          <div class="card-body">
-            <table id="example" class="display" style="width:100%">
-              <thead>
-              <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Extn.</th>
-                <th>Start date</th>
-                <th>Salary</th>
-              </tr>
-              </thead>
-              <tfoot>
-              <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Extn.</th>
-                <th>Start date</th>
-                <th>Salary</th>
-              </tr>
-              </tfoot>
-            </table>
-            <p></p>
-            <br>
+        <div class="col" (click)="navigateProd()" style="cursor: pointer;">
+          <div class="card">
+            <div class="card-header" style="font-size: larger; font-weight: bolder; color: darkturquoise">
+              PRODUCTS
+            </div>
+            <div class="card-body">
+              <img src="./assets/shopping-bag.svg">
+            </div>
+          </div>
+        </div>
 
-            <button class="btn btn-outline-primary" (click)="navigate()" >Create New Room</button>
+        <div class="col" (click)="navigatecredit()" style="cursor: pointer;">
+          <div class="card">
+            <div class="card-header" style="font-size: larger; font-weight: bolder; color: darkturquoise">
+              CREDITS
+            </div>
+            <div class="card-body">
+              <img src="./assets/film.svg">
+            </div>
+          </div>
+        </div>
 
+        <div class="col" (click)="navigateSub()" style="cursor: pointer;">
+          <div class="card">
+            <div class="card-header" style="font-size: larger; font-weight: bolder; color: darkturquoise">
+              SUBSCRIPTIONS
+            </div>
+            <div class="card-body">
+              <img src="./assets/calendar.svg">
+            </div>
+          </div>
+        </div>
+
+        <div class="col" (click)="navigatePromo()" style="cursor: pointer;">
+          <div class="card">
+            <div class="card-header" style="font-size: larger; font-weight: bolder; color: darkturquoise">
+              PROMOTIONS
+            </div>
+            <div class="card-body">
+              <img src="./assets/gift.svg">
+            </div>
           </div>
         </div>
 

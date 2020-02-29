@@ -1,0 +1,19 @@
+.btn-space {
+  margin-right: 15px;
+}
+
+.nav-color {
+  color: #ffffff!important;
+}
+
+.nav-color:hover {
+  opacity: 1;
+  color: #61dafb!important;
+}
+.active {
+  color: #61dafb!important;
+}
+.btn-outline-success{
+  color: #ffffff!important;
+  border-color: palevioletred!important;
+}

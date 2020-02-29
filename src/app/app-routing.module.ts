@@ -49,6 +49,14 @@ import {TrainingdeviceComponent} from "./trainingdevice/trainingdevice.component
 import {TrainingdevicecreateComponent} from "./trainingdevicecreate/trainingdevicecreate.component";
 import {RewardsComponent} from "./rewards/rewards.component";
 import {RewardscreateComponent} from "./rewardscreate/rewardscreate.component";
+import {ProductitemsComponent} from "./productitems/productitems.component";
+import {ProductitemcreateComponent} from "./productitemcreate/productitemcreate.component";
+import {CredititemsComponent} from "./credititems/credititems.component";
+import {CredititemscreateComponent} from "./credititemscreate/credititemscreate.component";
+import {SubscriptionitemsComponent} from "./subscriptionitems/subscriptionitems.component";
+import {SubscriptionitemscreateComponent} from "./subscriptionitemscreate/subscriptionitemscreate.component";
+import {PromotionsComponent} from "./promotions/promotions.component";
+import {PromotionscreateComponent} from "./promotionscreate/promotionscreate.component";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -110,6 +118,18 @@ const routes: Routes = [
 
   { path: 'ranks', component: RanksComponent },
   { path: 'ranks/create', component: RankscreateComponent },
+
+  { path: 'promotions', component: PromotionsComponent },
+  { path: 'promotions/create', component: PromotionscreateComponent },
+
+  { path: 'credit-items', component: CredititemsComponent },
+  { path: 'credit-items/create', component: CredititemscreateComponent },
+
+  { path: 'subscription-items', component: SubscriptionitemsComponent },
+  { path: 'subscription-items/create', component: SubscriptionitemscreateComponent },
+
+  { path: 'product-items', component: ProductitemsComponent },
+  { path: 'product-items/create', component: ProductitemcreateComponent },
 
   { path: 'specific-payment-methods', component: PaymentmethodComponent },
   { path: 'specific-payment-methods/create', component: PaymentmethodcreateComponent },

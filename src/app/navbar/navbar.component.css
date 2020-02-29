@@ -1,0 +1,28 @@
+.center {
+  margin: auto;
+  width: 50%;
+}
+
+/*.nav-color-two {*/
+/*  color: #ffffff!important;*/
+/*}*/
+
+.nav-color-two:hover {
+  opacity: 1;
+  color: #61dafb!important;
+}
+.active {
+  border-radius: 0 60px 60px 0;
+  color: #fff!important;
+  background: linear-gradient(to right,#8971ea,#7f72ea,#7574ea,#6a75e9,#5f76e8);
+  box-shadow: 0 7px 12px 0 rgba(95,118,232,.21);
+  opacity: 1;
+}
+
+/*.sidebar-nav #sidebarnav .sidebar-item.selected>.sidebar-link {*/
+/*  border-radius: 0 60px 60px 0;*/
+/*  color: #fff!important;*/
+/*  background: linear-gradient(to right,#8971ea,#7f72ea,#7574ea,#6a75e9,#5f76e8);*/
+/*  box-shadow: 0 7px 12px 0 rgba(95,118,232,.21);*/
+/*  opacity: 1;*/
+/*}*/
