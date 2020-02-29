@@ -1,0 +1,133 @@
+<style>
+  .menu-title-one{
+    color: red!important;
+  }
+  .ft-log-out{
+    color: red;
+  }
+</style>
+<div *ngIf="auth === true" style="padding-top: 6.5%!important;" class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
+  <div class="main-menu-content">
+    <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+      <li class=" navigation-header" style="text-align: center!important;">
+        <span></span>
+        <i class=" ft-minus" data-toggle="tooltip" data-placement="right"
+                               data-original-title="General"></i>
+      </li>
+      <li class=" nav-item"><a ><i class="ft-home"></i><span class="menu-title" data-i18n="">Dashboard</span>
+      </a>
+        <ul class="menu-content">
+
+          <li class="menu-item"><a class="menu-item" routerLink="/dash" routerLinkActive="active">Home</a>
+
+          <li class="menu-item"><a class="menu-item" routerLink="/calendar" routerLinkActive="active">Calendar</a>
+          </li>
+
+          <li><a class="menu-item" routerLink="/store" routerLinkActive="active">Store</a>
+          </li>
+
+          <li><a class="menu-item" routerLink="/report" routerLinkActive="active">Reports</a>
+          </li>
+
+          <li><a class="menu-item" routerLink="/purchases" routerLinkActive="active">Purchases</a>
+          </li>
+
+          <li><a class="menu-item" routerLink="/customers" routerLinkActive="active">Customers</a>
+          </li>
+
+          <li><a class="menu-item" routerLink="/staff" routerLinkActive="active">Staff</a>
+          </li>
+
+          <li><a class="menu-item" routerLink="/profile" routerLinkActive="active">Profile</a>
+          </li>
+
+        </ul>
+      </li>
+      <li class=" nav-item"><a ><i class="ft-monitor"></i><span class="menu-title" data-i18n="">Configurations</span></a>
+        <ul class="menu-content">
+
+            <ul class="menu-content">
+              <li><a class="menu-item" routerLink="/studios" routerLinkActive="active">Studios</a>
+              </li>
+
+              <li><a class="menu-item" routerLink="/rooms" routerLinkActive="active">Rooms</a>
+              </li>
+
+              <li><a class="menu-item" routerLink="/suits" routerLinkActive="active">Suits</a>
+              </li>
+
+              <li><a class="menu-item" routerLink="/training-devices" routerLinkActive="active">Training Devices</a>
+              </li>
+
+              <li><a class="menu-item" routerLink="/store" routerLinkActive="active">Store</a>
+              </li>
+
+              <li><a class="menu-item" routerLink="/schedule" routerLinkActive="active">Schedule</a>
+              </li>
+
+              <li><a class="menu-item" routerLink="/schedule-try-out" routerLinkActive="active">Tryout Schedule </a>
+              </li>
+
+              <li><a class="menu-item" routerLink="/training-sessions-tool" routerLinkActive="active">Training Sessions Tool</a>
+              </li>
+
+              <li><a class="menu-item" routerLink="/tax-scheme" routerLinkActive="active">Tax Scheme</a>
+              </li>
+
+              <li><a class="menu-item" routerLink="/rewards" routerLinkActive="active">Rewards</a>
+              </li>
+
+              <li><a class="menu-item" routerLink="/ranks" routerLinkActive="active">Loyalty System</a>
+              </li>
+
+              <li><a class="menu-item" routerLink="/specific-payment-methods" routerLinkActive="active">Payment Methods</a>
+              </li>
+
+            </ul>
+<!--          </li>-->
+        </ul>
+      </li>
+
+<!--      <li class=" navigation-header">-->
+<!--        <span>Others</span><i class=" ft-minus" data-toggle="tooltip" data-placement="right"-->
+<!--                              data-original-title="Others"></i>-->
+<!--      </li>-->
+<!--      <li class=" nav-item"><a ><i class="ft-align-left"></i><span class="menu-title" data-i18n="">Menu levels</span></a>-->
+<!--        <ul class="menu-content">-->
+<!--          <li><a class="menu-item" >Second level</a>-->
+<!--          </li>-->
+<!--          <li><a class="menu-item" >Second level child</a>-->
+<!--            <ul class="menu-content">-->
+<!--              <li><a class="menu-item" >Third level</a>-->
+<!--              </li>-->
+<!--              <li><a class="menu-item" >Third level child</a>-->
+<!--                <ul class="menu-content">-->
+<!--                  <li><a class="menu-item" >Fourth level</a>-->
+<!--                  </li>-->
+<!--                  <li><a class="menu-item" >Fourth level</a>-->
+<!--                  </li>-->
+<!--                </ul>-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </li>-->
+<!--      <li class=" nav-item"><a ><i class="ft-file"></i><span class="menu-title" data-i18n="">Changelog</span></a>-->
+<!--      </li>-->
+<!--      <li class="disabled nav-item"><a ><i class="ft-slash"></i><span class="menu-title" data-i18n="">Disabled Menu</span></a>-->
+<!--      </li>-->
+
+<!--      <li class=" nav-item"><a ><i class="ft-user-check"></i><span class="menu-title" data-i18n="">Profile</span>-->
+
+      <li  (click)="logout()" style="color: red!important;" class=" nav-item"><a ><i class="ft-log-out"></i>
+        <span class="menu-title-one" data-i18n="">
+        Logout {{message}}
+        </span>
+      </a>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

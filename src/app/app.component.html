@@ -1,3 +1,5 @@
-<app-dashmenu></app-dashmenu>
-<app-navbar></app-navbar>
+<!--<app-dashmenu></app-dashmenu>-->
+<app-header *ngIf="auth === true " class="f"></app-header>
+<app-leftnav *ngIf="auth === true" class="f"></app-leftnav>
 <router-outlet></router-outlet>
+

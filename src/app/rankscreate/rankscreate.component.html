@@ -1,0 +1,55 @@
+
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-header row">
+    </div>
+    <div class="content-body">
+      <!-- Stats -->
+      <div class="row">
+        <h1>New room</h1>
+        <div class="card col-md-12">
+          <div class="card-body">
+
+            <form>
+              <div class="form-row">
+
+                <div class="col">
+                  <label>Identifier</label>
+                  <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class="col">
+                  <label>Capacity</label>
+                  <input type="number" class="form-control" placeholder="">
+                </div>
+              </div>
+            </form>
+
+            <p></p>
+            <br>
+
+            <button class="btn btn-outline-primary" (click)="navigateback()" style="margin-left: 10px; float: right; ">Back to Rooms</button>
+            <div class="divider"></div>
+
+            <button class="btn btn-primary" (click)="save()" style=" float: right; width: 13%!important; ">Save</button>
+
+          </div>
+        </div>
+
+
+      </div>
+      <!--/ Stats -->
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+  $(document).ready(function() {
+    $('#example').DataTable( {
+      "ajax": "data.json"
+    } );
+  } );
+</script>
+
+

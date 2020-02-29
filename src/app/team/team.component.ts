@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from "../data.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-team',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamComponent implements OnInit {
 
-  constructor() { }
+  public auth:boolean;
+
+  constructor(
+    private data:DataService,
+    private routes:Router
+  ) { }
 
   ngOnInit() {
+    this.auth = JSON.parse(localStorage.getItem('auth'));
+    this.auth !== true ? this.routes.navigate(['/login']) : '';
+    this.data.changeMessage('false');
   }
 
 }

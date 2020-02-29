@@ -1,0 +1,57 @@
+
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-header row">
+    </div>
+    <div class="content-body">
+      <!-- Stats -->
+      <div class="row">
+        <h1>Tax Scheme</h1>
+        <div class="card col-md-12">
+          <div class="card-body">
+            <table id="example" class="display" style="width:100%">
+              <thead>
+              <tr>
+                <th>Identifier</th>
+                <th>Studio</th>
+                <th>Occupied</th>
+
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let i of mytax">
+                <td>{{i.name}}</td>
+                <td>{{i.percent}}</td>
+              </tr>
+
+              </tbody>
+              <tfoot>
+              <tr>
+                <th>Identifier</th>
+                <th>Studio</th>
+                <th>Occupied</th>
+              </tr>
+              </tfoot>
+            </table>
+            <p></p>
+            <br>
+
+            <button class="btn btn-primary" (click)="navigate()" style="float: right">Create New Tax Scheme</button>
+
+          </div>
+        </div>
+
+
+      </div>
+      <!--/ Stats -->
+
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('#example').DataTable();
+  } );
+</script>
+

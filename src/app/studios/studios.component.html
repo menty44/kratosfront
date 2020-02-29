@@ -1,0 +1,54 @@
+
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-header row">
+    </div>
+    <div class="content-body">
+      <!-- Stats -->
+      <div class="row">
+
+        <div class="card col-md-12">
+          <div class="card-body">
+            <table id="example" class="display" style="width:100%">
+              <thead>
+              <tr>
+                <th>Studio name</th>
+                <th>Company</th>
+                <th>Phone</th>
+
+              </tr>
+              </thead>
+              <tfoot>
+              <tr>
+                <th>Studio name</th>
+                <th>Company</th>
+                <th>Phone</th>
+              </tr>
+              </tfoot>
+            </table>
+            <p></p>
+            <br>
+
+            <button class="btn btn-outline-primary" (click)="navigate()" >Create New Studio</button>
+
+          </div>
+        </div>
+
+
+      </div>
+      <!--/ Stats -->
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+  $(document).ready(function() {
+    $('#example').DataTable( {
+      "ajax": "data.json"
+    } );
+  } );
+</script>
+
+

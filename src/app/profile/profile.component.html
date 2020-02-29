@@ -1,0 +1,87 @@
+
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-header row">
+    </div>
+    <div class="content-body">
+      <!-- Stats -->
+      <div class="row">
+<h1>Profile</h1>
+        <div class="card col-md-12">
+          <div class="card-body">
+            <form>
+              <div class="form-row" style="padding-bottom: 3%">
+
+                <div class="col">
+                  <label>First Name</label>
+                  <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class="col">
+                  <label>Last Name</label>
+                  <input type="number" class="form-control" placeholder="">
+                </div>
+                <div class="col">
+                  <label>Birth Date</label>
+                  <input type="number" class="form-control" placeholder="">
+                </div>
+              </div>
+
+              <div class="form-row" style="padding-bottom: 3%">
+
+                <div class="col">
+                  <label>Email </label>
+                  <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class="col">
+                  <label>Phone </label>
+                  <input type="number" class="form-control" placeholder="">
+                </div>
+                <div class="col">
+                  <label>Gender</label>
+                  <input type="number" class="form-control" placeholder="">
+                </div>
+              </div>
+
+              <div class="form-row" style="padding-bottom: 3%">
+
+                <div class="col">
+                  <label>Studio</label>
+                  <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class="col">
+                  <label>Language</label>
+                  <input type="number" class="form-control" placeholder="">
+                </div>
+                <div class="col">
+                  <label></label>
+
+                </div>
+
+              </div>
+            </form>
+            <p></p>
+            <br>
+
+            <button class="btn btn-primary" (click)="save()" >Save</button>
+
+          </div>
+        </div>
+
+
+      </div>
+      <!--/ Stats -->
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+  $(document).ready(function() {
+    $('#example').DataTable( {
+      "ajax": "data.json"
+    } );
+  } );
+</script>
+
+
