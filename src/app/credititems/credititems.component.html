@@ -1,1 +1,61 @@
-<p>credititems works!</p>
+
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-header row">
+    </div>
+    <div class="content-body">
+      <!-- Stats -->
+      <div class="row">
+        <h1>Credit Items</h1>
+        <div class="card col-md-12">
+          <div class="card-body">
+            <table id="example" class="table table-striped table-bordered " style="width:100%">
+              <thead>
+              <tr style="color: darkturquoise">
+                <th>Name</th>
+                <th>Status</th>
+                <th>Tax</th>
+                <th>Price</th>
+
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let i of listItems">
+                <td>{{i.name}}</td>
+                <td>{{i.list}}</td>
+                <td>{{i.scheme}}</td>
+                <td>{{i.price}}</td>
+              </tr>
+
+              </tbody>
+              <tfoot>
+              <tr style="color: darkturquoise">
+                <th>Name</th>
+                <th>Status</th>
+                <th>Tax</th>
+                <th>Price</th>
+              </tr>
+              </tfoot>
+            </table>
+            <p></p>
+            <br>
+
+            <button class="btn btn-primary" (click)="navigate()" style="float: right">Create New Product Item</button>
+
+          </div>
+        </div>
+
+
+      </div>
+      <!--/ Stats -->
+
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('#example').DataTable();
+  } );
+</script>
+

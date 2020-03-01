@@ -57,6 +57,7 @@ import {SubscriptionitemsComponent} from "./subscriptionitems/subscriptionitems.
 import {SubscriptionitemscreateComponent} from "./subscriptionitemscreate/subscriptionitemscreate.component";
 import {PromotionsComponent} from "./promotions/promotions.component";
 import {PromotionscreateComponent} from "./promotionscreate/promotionscreate.component";
+import {ListproductsComponent} from "./listproducts/listproducts.component";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -81,6 +82,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
 
   { path: 'store', component: StoreComponent },
+  { path: 'store/list', component: ListproductsComponent },
 
   { path: 'calendar', component: CalenderComponent },
 

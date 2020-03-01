@@ -26,9 +26,7 @@ import { DownloadComponent } from './download/download.component';
 import { TeamComponent } from './team/team.component';
 import { PrivacyComponent } from './privacy/privacy.component'
 
-import  { MessageBusModule } from 'ngx-message-bus';
 
-import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './counter.reducer';
 import { MenubuttonsComponent } from './menubuttons/menubuttons.component';
 import { VerifyComponent } from './verify/verify.component';
@@ -75,6 +73,7 @@ import {DataTablesModule} from "angular-datatables";
 
 
 import { FusionChartsModule } from "angular-fusioncharts";
+import {MessageBusModule, ErrorHandlingEnum, Connection, MessageBus} from 'ngx-message-bus';
 
 // Import FusionCharts library and chart modules
 import * as FusionCharts from "fusioncharts";
@@ -86,6 +85,7 @@ import { SubscriptionitemscreateComponent } from './subscriptionitemscreate/subs
 import { SubscriptionitemsComponent } from './subscriptionitems/subscriptionitems.component';
 import { PromotionsComponent } from './promotions/promotions.component';
 import { PromotionscreateComponent } from './promotionscreate/promotionscreate.component';
+import { ListproductsComponent } from './listproducts/listproducts.component';
 // Pass the fusioncharts library and chart modules
 FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);
 
@@ -156,14 +156,15 @@ FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);
     SubscriptionitemscreateComponent,
     SubscriptionitemsComponent,
     PromotionsComponent,
-    PromotionscreateComponent
+    PromotionscreateComponent,
+    ListproductsComponent
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         FormsModule,
         MessageBusModule,
-        StoreModule.forRoot({count: counterReducer}),
+        // StoreModule.forRoot({count: counterReducer}),
         DataTablesModule,
         FusionChartsModule
     ],

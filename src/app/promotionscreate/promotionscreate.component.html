@@ -1,1 +1,95 @@
-<p>promotionscreate works!</p>
+
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-header row">
+    </div>
+    <div class="content-body">
+      <!-- Stats -->
+      <div class="row">
+        <h1>New Promotion</h1>
+        <div class="card col-md-12">
+          <div class="card-body">
+
+            <p></p>
+                      <br>
+
+            <div class="form-row">
+
+              <div class="col">
+
+                <label>
+                  Promotion Name
+                </label>
+                <input #pm type="text" class="form-control" placeholder="">
+
+              </div>
+
+              <div class="col">
+
+                <label>
+                  Quantity
+                </label>
+                <input #q type="number" class="form-control" placeholder="">
+              </div>
+
+
+            </div>
+
+            <p></p>
+            <div class="form-row">
+              <div class="col">
+                <label>
+                  Additional information
+                </label>
+                <input #ai type="text" class="form-control" placeholder="">
+              </div>
+              <div class="col">
+                <label>Expiry (Optional)</label>
+                <input #exp type="text" class="form-control" placeholder="dd/mm/yyyy">
+
+              </div>
+            </div>
+            <p></p>
+
+            <div class="form-row">
+              <div class="col">
+
+                <label>Select a payment method</label>
+                <br>
+                <select #payment class="selectpicker form-control" data-live-search="true">
+                  <option data-tokens="ketchup mustard" disabled>Select a promotion type</option>
+                  <option data-tokens="ketchup mustard">Voucher</option>
+                  <option data-tokens="ketchup mustard">Percentage Discount</option>
+                  <option data-tokens="ketchup mustard">Amount Discount</option>
+                </select>
+
+              </div>
+            </div>
+            <br>
+
+            <button class="btn btn-outline-primary" (click)="navigate()" style="margin-left: 10px; float: right; ">Back to Promotions</button>
+            <div class="divider"></div>
+
+            <button class="btn btn-primary" (click)="save(payment.value, exp.value, q.value, pm.value, ai.value)" style=" float: right; width: 13%!important; ">Save</button>
+
+          </div>
+        </div>
+
+
+      </div>
+      <!--/ Stats -->
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+  $(document).ready(function() {
+    $('#example').DataTable( {
+      "ajax": "data.json"
+    } );
+  } );
+</script>
+
+

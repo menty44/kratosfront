@@ -10,7 +10,7 @@ import { ApiUrlsServiceService } from '../api-urls-service.service';
 
 import {MessageBusModule, ErrorHandlingEnum, Connection, MessageBus} from 'ngx-message-bus';
 
-import { Store, select } from '@ngrx/store';
+// import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { increment, decrement, reset } from '../counter.actions';
 
@@ -39,27 +39,27 @@ export class LoginComponent implements OnInit {
   constructor(private apiUrlsService: ApiUrlsServiceService,
               private messageBus: MessageBus,
               private routes : Router,
-              private store: Store<{ count: number }>,
+              // private store: Store<{ count: number }>,
               private service : MyServiceService,
               private data: DataService
   ) {
-    // @ts-ignore
-    this.count$ = store.pipe(select('count'));
+    // // @ts-ignore
+    // this.count$ = store.pipe(select('count'));
   }
 
   msg = "";
 
-  increment() {
-    this.store.dispatch(increment());
-  }
+  // increment() {
+  //   this.store.dispatch(increment());
+  // }
+  //
+  // decrement() {
+  //   this.store.dispatch(decrement());
+  // }
 
-  decrement() {
-    this.store.dispatch(decrement());
-  }
-
-  reset() {
-    this.store.dispatch(reset());
-  }
+  // reset() {
+  //   this.store.dispatch(reset());
+  // }
 
   ngOnInit() {
     //this.auth = JSON.parse(localStorage.getItem('auth'));
@@ -98,7 +98,7 @@ export class LoginComponent implements OnInit {
 
           self.test.emit(JSON.stringify({auth: true}));
 
-          // self.myConnection = self.messageBus.connect('auth', 'auth');
+          self.myConnection = self.messageBus.connect('auth', 'auth');
           // console.log(self.myConnection, 'myConnection ');
 
           // const ngZone = this.injector.get(NgZone);

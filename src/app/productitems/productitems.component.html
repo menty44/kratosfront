@@ -6,28 +6,34 @@
     <div class="content-body">
       <!-- Stats -->
       <div class="row">
-        <h1>Tax Scheme</h1>
+        <h1>Product Items</h1>
         <div class="card col-md-12">
           <div class="card-body">
             <table id="example" class="table table-striped table-bordered " style="width:100%">
               <thead>
               <tr style="color: darkturquoise">
-                <th>Tax scheme name</th>
-                <th>Tax (%)</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Tax</th>
+                <th>Price</th>
 
               </tr>
               </thead>
               <tbody>
-              <tr *ngFor="let i of mytax">
+              <tr *ngFor="let i of listItems">
                 <td>{{i.name}}</td>
-                <td>{{i.percent}}</td>
+                <td>{{i.list}}</td>
+                <td>{{i.scheme}}</td>
+                <td>{{i.price}}</td>
               </tr>
 
               </tbody>
               <tfoot>
               <tr style="color: darkturquoise">
-                <th>Tax scheme name</th>
-                <th>Tax (%)</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Tax</th>
+                <th>Price</th>
               </tr>
               </tfoot>
             </table>

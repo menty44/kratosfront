@@ -1,1 +1,113 @@
-<p>credititemscreate works!</p>
+
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-header row">
+    </div>
+    <div class="content-body">
+      <!-- Stats -->
+      <div class="row">
+        <h1>New Credit Items</h1>
+        <div class="card col-md-12">
+          <div class="card-body">
+
+            <form>
+              <div class="form-row">
+
+                <div class="col">
+                  <label>Name</label>
+                  <input #name type="text" class="form-control" placeholder="">
+                </div>
+
+                <div class="col">
+                  <label>Price</label>
+                  <input #price type="number" class="form-control" placeholder="">
+                </div>
+
+                <div class="col">
+                  <label>Credits quantity</label>
+                  <input #credq type="number" class="form-control" placeholder="">
+                </div>
+
+              </div>
+            </form>
+
+            <p></p>
+            <p></p>
+            <p></p>
+
+            <p></p>
+            <br>
+
+            <div class="form-row">
+
+              <div class="col">
+                <label>Expiration days </label>
+                <input #exp type="number" class="form-control" placeholder="">
+              </div>
+
+              <div class="col">
+
+                <label>Listed</label>
+                <br>
+                <select #list class="selectpicker form-control" data-live-search="true">
+                  <option data-tokens="ketchup mustard"></option>
+                  <option data-tokens="ketchup mustard">Listed</option>
+                  <option data-tokens="ketchup mustard">Unlisted</option>
+                </select>
+
+              </div>
+
+              <div class="col">
+
+                <label>Tax scheme
+                </label>
+                <br>
+                <select #taxs class="selectpicker form-control" data-live-search="true" >
+                  <option data-tokens=""></option>
+                  <option  data-tokens="" *ngFor="let i of tax">{{i.name}}</option>
+
+                </select>
+              </div>
+
+
+            </div>
+
+            <p></p>
+            <p></p>
+            <p></p>
+
+            <div class="form-row">
+              <div class = "col">
+                <label >Description</label>
+                <textarea #desc class = "form-control" rows = "3" placeholder = "Player Details"></textarea>
+              </div>
+            </div>
+            <p></p>
+            <br>
+
+            <button class="btn btn-outline-primary" (click)="navigate()" style="margin-left: 10px; float: right; ">Back to Credit Items</button>
+            <div class="divider"></div>
+
+            <button class="btn btn-primary" (click)="save(name.value, price.value, list.value, taxs.value, desc.value, credq.value, exp.value)" style=" float: right; width: 13%!important; ">Save</button>
+
+          </div>
+        </div>
+
+
+      </div>
+      <!--/ Stats -->
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+  $(document).ready(function() {
+    $('#example').DataTable( {
+      "ajax": "data.json"
+    } );
+  } );
+</script>
+
+
