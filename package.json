@@ -33,7 +33,7 @@
     "datatables.net-dt": "^1.10.20",
     "fusioncharts": "^3.15.1",
     "izimodal": "^1.5.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lucidjs": "^3.1.1",
     "ng-alertify": "^1.0.2",
     "ngx-message-bus": "^8.0.0",
