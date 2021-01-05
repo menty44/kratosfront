@@ -26,7 +26,7 @@
     "alertifyjs": "^1.13.1",
     "angular-datatables": "^8.0.0",
     "angular-fusioncharts": "^3.0.4",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootbox": "^5.4.0",
     "d3": "^5.15.0",
     "datatables.net": "^1.10.20",
